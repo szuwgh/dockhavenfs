@@ -23,13 +23,10 @@ impl ObjectAPIFunction {
         bucket: String,
         s: ObjectManager,
     ) -> Result<impl Reply, Rejection> {
-        //s.make_bucket(&bucket);
         println!("{}", bucket);
-        //  warp::reply::with_header(reply, name, value)
         Ok(Response::builder()
             .status(StatusCode::OK)
             .body(Body::empty()))
-        //Ok(StatusCode::OK)
     }
 
     pub(crate) async fn put_object(
